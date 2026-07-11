@@ -29,8 +29,6 @@ export default function Eligibility() {
     <section className="bg-[#111113] py-28">
       <div className="w-full px-6 md:px-10 lg:px-20 xl:px-24">
 
-        {/* Heading */}
-
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-red-500">
           ELIGIBILITY
         </p>
@@ -43,8 +41,6 @@ export default function Eligibility() {
           We welcome creators across every niche, platform, and audience size.
           If you create — this is for you.
         </p>
-
-        {/* Cards */}
 
         <div className="mt-16 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
 

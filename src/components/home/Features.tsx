@@ -65,12 +65,10 @@ export default function Features() {
                   <Icon className="h-6 w-6 text-red-400" />
                 </div>
 
-                {/* Title */}
                 <h3 className="text-xl font-bold text-white">
                   {item.title}
                 </h3>
 
-                {/* Description */}
                 <p className="mt-4 text-base leading-7 text-zinc-400">
                   {item.description}
                 </p>

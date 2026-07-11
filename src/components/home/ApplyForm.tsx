@@ -90,8 +90,6 @@ const handleSubmit = async (e: React.FormEvent) => {
 
     if (data.success) {
       alert("Application Submitted Successfully 🎉");
-
-      // Form Reset
       setFormData({
         firstName: "",
         lastName: "",
@@ -141,8 +139,6 @@ const handleSubmit = async (e: React.FormEvent) => {
 
         <div className="rounded-[32px] border border-white/10 bg-[#1a1a1e] p-8 md:p-14">
 
-          {/* Heading */}
-
           <h2 className="font-[var(--font-anton)] text-[42px] uppercase leading-none text-white md:text-[64px]">
             APPLY AS A CREATOR
           </h2>
@@ -152,17 +148,12 @@ const handleSubmit = async (e: React.FormEvent) => {
             within 5–7 business days.
           </p>
 
-          {/* Divider */}
-
           <div className="my-12 border-b border-white/10"></div>
-
-          {/* Personal Info */}
 
           <h3 className="mb-10 text-sm font-bold uppercase tracking-[0.35em] text-red-500">
             PERSONAL INFORMATION
           </h3>
      <form onSubmit={handleSubmit} className="space-y-8">
-            {/* Row 1 */}
 
             <div className="grid gap-8 md:grid-cols-2">
 
@@ -198,8 +189,6 @@ const handleSubmit = async (e: React.FormEvent) => {
 
             </div>
 
-            {/* Row 2 */}
-
             <div className="grid gap-8 md:grid-cols-2">
 
               <div>
@@ -209,9 +198,9 @@ const handleSubmit = async (e: React.FormEvent) => {
 
                 <input
                     type="email"
-  name="email"
-  value={formData.email}
-  onChange={handleChange}
+                    name="email"
+                   value={formData.email}
+                   onChange={handleChange}
                   placeholder="hello@yoursite.com"
                   className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500"
                 />
@@ -224,8 +213,8 @@ const handleSubmit = async (e: React.FormEvent) => {
 
                 <input
                   name="phone"
-  value={formData.phone}
-  onChange={handleChange}
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="+91 9876543210"
                   className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500"
                 />
@@ -233,7 +222,6 @@ const handleSubmit = async (e: React.FormEvent) => {
 
             </div>
 
-            {/* Row 3 */}
 
             <div className="grid gap-8 md:grid-cols-2">
 
@@ -244,8 +232,8 @@ const handleSubmit = async (e: React.FormEvent) => {
 
                 <select
                  name="country"
-  value={formData.country}
-  onChange={handleChange}
+                 value={formData.country}
+                 onChange={handleChange}
                   className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500"
                 >
                   <option>India</option>
@@ -264,8 +252,8 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <input
                      name="city"
                       type="text"
-  value={formData.city}
-  onChange={handleChange}
+                     value={formData.city}
+                   onChange={handleChange}
                   placeholder="e.g. Mumbai"
                   className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500"
                 />
@@ -273,15 +261,11 @@ const handleSubmit = async (e: React.FormEvent) => {
 
             </div>
 
-  {/* ================= CREATOR PROFILE ================= */}
-
   <div className="mt-16 border-t border-white/10 pt-12">
 
     <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.35em] text-red-500">
       CREATOR PROFILE
     </h3>
-
-    {/* Row 1 */}
 
     <div className="grid gap-8 md:grid-cols-2">
 
@@ -293,9 +277,9 @@ const handleSubmit = async (e: React.FormEvent) => {
 
         <input
           name="creatorHandle"
-  value={formData.creatorHandle}
-  onChange={handleChange}
-  type="text"
+          value={formData.creatorHandle}
+          onChange={handleChange}
+         type="text"
           placeholder="@yourname"
           className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500"
         />
@@ -308,8 +292,8 @@ const handleSubmit = async (e: React.FormEvent) => {
         </label>
 
         <select name="contentNiche"
-  value={formData.contentNiche}
-  onChange={handleChange} className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500">
+          value={formData.contentNiche}
+         onChange={handleChange} className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500">
           <option>Education & How-to</option>
           <option>Gaming</option>
           <option>Tech</option>
@@ -322,8 +306,6 @@ const handleSubmit = async (e: React.FormEvent) => {
       </div>
 
     </div>
-
-    {/* Platform */}
 
     <div className="mt-10">
 
@@ -350,8 +332,8 @@ const handleSubmit = async (e: React.FormEvent) => {
           >
             <input
              type="checkbox"
-  checked={formData.primaryPlatforms.includes(item)}
-  onChange={() => handleArrayCheckbox("primaryPlatforms", item)}
+             checked={formData.primaryPlatforms.includes(item)}
+             onChange={() => handleArrayCheckbox("primaryPlatforms", item)}
               className="h-5 w-5 accent-red-500"
             />
 
@@ -367,8 +349,6 @@ const handleSubmit = async (e: React.FormEvent) => {
 
     </div>
 
-    {/* Followers */}
-
     <div className="mt-10 grid gap-8 md:grid-cols-2">
 
       <div>
@@ -378,8 +358,8 @@ const handleSubmit = async (e: React.FormEvent) => {
         </label>
 
         <select  name="followersRange"
-  value={formData.followersRange}
-  onChange={handleChange} className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500">
+          value={formData.followersRange}
+          onChange={handleChange} className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500">
           <option>Select range</option>
           <option>1K - 10K</option>
           <option>10K - 50K</option>
@@ -395,8 +375,8 @@ const handleSubmit = async (e: React.FormEvent) => {
         </label>
 
         <select  name="averageViews"
-  value={formData.averageViews}
-  onChange={handleChange} className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500">
+          value={formData.averageViews}
+          onChange={handleChange} className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500">
           <option>Select range</option>
           <option>1K - 10K</option>
           <option>10K - 50K</option>
@@ -407,8 +387,6 @@ const handleSubmit = async (e: React.FormEvent) => {
 
     </div>
 
-    {/* Profile Link */}
-
     <div className="mt-10">
 
       <label className="mb-3 block text-sm font-semibold uppercase tracking-[0.18em] text-zinc-300">
@@ -418,9 +396,9 @@ const handleSubmit = async (e: React.FormEvent) => {
 
       <input
         name="primaryProfileLink"
-  value={formData.primaryProfileLink}
-  onChange={handleChange}
-  type="url"
+        value={formData.primaryProfileLink}
+        onChange={handleChange}
+        type="url"
         placeholder="https://youtube.com/@yourchannel"
         className="h-14 w-full rounded-xl border border-transparent bg-[#0d0d0f] px-5 text-white outline-none transition focus:border-red-500"
       />
@@ -428,7 +406,6 @@ const handleSubmit = async (e: React.FormEvent) => {
     </div>
 
   </div>
-  {/* Other Social Media Links */}
 
 <div className="mt-10">
   <label className="mb-3 block text-sm font-semibold uppercase tracking-[0.18em] text-zinc-300">
@@ -445,11 +422,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   />
 </div>
 
-{/* Divider */}
-
 <div className="my-12 border-b border-white/10"></div>
-
-{/* ================= PARTICIPATION PREFERENCES ================= */}
 
 <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.35em] text-red-500">
   PARTICIPATION PREFERENCES
@@ -476,7 +449,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         <input
           type="checkbox"
           checked={formData.interestedIn.includes(item)}
-  onChange={() => handleArrayCheckbox("interestedIn", item)}
+           onChange={() => handleArrayCheckbox("interestedIn", item)}
           className="h-5 w-5 accent-red-500"
         />
 
@@ -488,7 +461,6 @@ const handleSubmit = async (e: React.FormEvent) => {
   </div>
 </div>
 
-{/* About Yourself */}
 
 <div className="mt-10">
   <label className="mb-3 block text-sm font-semibold uppercase tracking-[0.18em] text-zinc-300">
@@ -505,7 +477,6 @@ const handleSubmit = async (e: React.FormEvent) => {
     className="w-full rounded-xl border border-transparent bg-[#0d0d0f] p-5 text-white outline-none transition focus:border-red-500"
   />
 </div>
-{/* Previous Event Experience */}
 
 <div className="mt-10">
   <label className="mb-3 block text-sm font-semibold uppercase tracking-[0.18em] text-zinc-300">
@@ -521,8 +492,6 @@ const handleSubmit = async (e: React.FormEvent) => {
     className="w-full rounded-xl border border-transparent bg-[#0d0d0f] p-5 text-white outline-none transition focus:border-red-500"
   />
 </div>
-
-{/* How did you hear */}
 
 <div className="mt-10">
   <label className="mb-3 block text-sm font-semibold uppercase tracking-[0.18em] text-zinc-300">
@@ -544,11 +513,8 @@ const handleSubmit = async (e: React.FormEvent) => {
   </select>
 </div>
 
-{/* Divider */}
-
 <div className="my-12 border-b border-white/10"></div>
 
-{/* Agreements */}
 
 <div className="space-y-8">
 
@@ -596,42 +562,6 @@ const handleSubmit = async (e: React.FormEvent) => {
   </label>
 
 </div>
-{/* <button
-  type="submit"
-  disabled={loading}
-    className="
-    group relative mt-10
-    w-full
-    rounded-xl
-    inline-flex items-center justify-center
-    overflow-hidden
-    border border-red-500
-    bg-red-500
-    px-12 py-5
-    text-sm font-bold uppercase
-    tracking-[0.3em]
-    text-white
-    transition-all duration-300
-    hover:bg-transparent
-    hover:text-red-500
-  ">
-  {loading ? "Submitting..." : "Submit My Application"}
-
-
-  <span className="relative z-10 ">
-    Submit My  Application
-  </span>
-
-  <span
-    className="
-      ml-4 text-2xl
-      transition-transform duration-300
-      group-hover:translate-x-2
-    "
-  >
-    →
-  </span>
-</button> */}
 
 <button
   type="submit"
@@ -647,14 +577,10 @@ const handleSubmit = async (e: React.FormEvent) => {
       →
     </span>
   )}
-</button>
-
-</form>
-
-
-        </div>
-
-      </div>
-    </section>
+  </button>
+  </form> 
+ </div>
+</div>
+</section>
   );
 }

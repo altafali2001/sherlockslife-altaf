@@ -26,12 +26,7 @@ export default function CTAStats() {
     <section className="bg-[#090909] px-6 py-20">
       <div className="mx-auto flex max-w-7xl flex-col items-center">
 
-        {/* Buttons */}
-
         <div className="flex flex-col gap-5 sm:flex-row">
-          {/* <Button className="h-16 rounded-full bg-[#ff4545] px-10 text-lg font-semibold hover:bg-[#ff2f2f]">
-            Apply as a Creator
-          </Button> */}
           <Button className="h-16 rounded-full bg-[#ff4545] px-10 text-lg font-semibold hover:bg-[#ff2f2f]">
              <Link 
              href="#apply"
@@ -50,8 +45,6 @@ export default function CTAStats() {
 
            
         </div>
-
-        {/* Stats */}
 
         <div className="mt-20 flex w-full flex-wrap items-center justify-center gap-14 lg:gap-20">
           {stats.map((item) => (

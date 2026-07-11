@@ -34,9 +34,6 @@ export default function ApplicationTimeline() {
     <section className="bg-[#111113] py-28">
       <div className="w-full px-6 md:px-10 lg:px-20 xl:px-24">
 
-
-        {/* Heading */}
-
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-red-500">
           KEY DATES
         </p>
@@ -44,9 +41,6 @@ export default function ApplicationTimeline() {
         <h2 className="font-[var(--font-anton)] text-[50px] uppercase leading-[0.9] text-white md:text-[84px]">
           APPLICATION TIMELINE
         </h2>
-
-        {/* Timeline */}
-
         <div className="relative mt-20 ml-6 border-l-2 border-orange-500">
 
           {timeline.map((item, index) => (
@@ -56,25 +50,18 @@ export default function ApplicationTimeline() {
                 index !== timeline.length - 1 ? "pb-16" : ""
               }`}
             >
-              {/* Circle */}
 
               <div className="absolute -left-[22px] top-0 flex h-11 w-11 items-center justify-center rounded-full bg-red-500 text-sm font-bold text-white">
                 {item.step}
               </div>
 
-              {/* Date */}
-
               <p className="text-sm font-bold uppercase tracking-wide text-orange-400">
                 {item.date}
               </p>
 
-              {/* Title */}
-
               <h3 className="mt-2 text-[32px] font-bold text-white">
                 {item.title}
               </h3>
-
-              {/* Description */}
 
               <p className="mt-2 max-w-3xl text-lg leading-8 text-zinc-400">
                 {item.description}

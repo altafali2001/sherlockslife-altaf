@@ -42,8 +42,6 @@ export default function CreatorPerks() {
     <section className="bg-[#111113] py-28">
       <div className="w-full px-6 md:px-10 lg:px-20 xl:px-24">
 
-        {/* Heading */}
-
         <p className="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-red-500">
           CREATOR PERKS
         </p>
@@ -57,8 +55,6 @@ export default function CreatorPerks() {
           designed to help you shine.
         </p>
 
-        {/* Cards */}
-
         <div className="mt-16 flex flex-wrap gap-6 ">
 
           {perks.map((perk) => (
@@ -66,13 +62,9 @@ export default function CreatorPerks() {
               key={perk.number}
              className="flex w-[300px] gap-5 rounded-3xl border border-white/10 bg-[#18181c] p-6 transition-all duration-300 hover:-translate-y-2 hover:border-red-500/40"
             >
-              {/* Number */}
-
               <span className="font-[var(--font-anton)] text-5xl text-red-500">
                 {perk.number}
               </span>
-
-              {/* Content */}
 
               <div>
                 <h3 className="text-2xl font-bold text-white">
